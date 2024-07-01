@@ -1,10 +1,10 @@
 <template>
-    <form action="">
+    <form @submit="enviarFormulario($event)" >
         <div>
-            <InputText />
+            <InputText v-model="name" :value="name" />
         </div>
         <div>
-            <InputText />
+            <InputText v-model="email" :value="email" />
         </div>
         <SubmitBtn />
     </form>
@@ -19,6 +19,26 @@
         components: {
             InputText,
             SubmitBtn
+        },
+        data() {
+            return({
+                name: "Roberto",
+                email: "robeto#liam.com"
+            });
+        },
+        methods: {
+            enviarFormulario(e) {
+                e.preventDefault();
+                
+            }
         }
     };
 </script>
+
+<style scoped>
+    form {
+        margin-bottom: 110px;
+        text-align: center;
+        width: 13%;
+    }
+</style>

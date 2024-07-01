@@ -1,6 +1,6 @@
 <template>
     <h3>{{ nome }}</h3>
-    <InfoPessoa />
+    <InfoPessoa :email="email" :esta_trabalhando="false" />
     <FormPessoa />
 </template>
 
@@ -12,7 +12,8 @@
         name: "PessoaId",
         data() {
             return({
-                nome: "Fabiano Teixeira Lages"
+                nome: "Fabiano Teixeira Lages",
+                email: "fabiano.lages@tenti.com.br"
             });
         },
         components: {

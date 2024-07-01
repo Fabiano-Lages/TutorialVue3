@@ -21,11 +21,13 @@
 import PicAvatar from "./PicAvatar.vue"
     export default {
         name: "InfoPessoa",
+        props: {
+            email: String,
+            esta_trabalhando: Boolean
+        },
         data() {
             return({
-                esta_trabalhando: false,
                 mostrar_email: false,
-                email: "fabianolages@gmail.cvom",
                 meu_link: "https://github.com/Fabiano-Lages",
                 backend_tecnologies: [
                     "JavaScript", "PHP", "C#", "Python"
